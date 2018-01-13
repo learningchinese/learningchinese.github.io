@@ -38,14 +38,16 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -87,10 +89,11 @@ var AppModule = /** @class */ (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_10__configs_app_config__["a" /* AppConfig */],
                 __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */],
-                __WEBPACK_IMPORTED_MODULE_16__utils_string_util__["a" /* StringUtil */],
+                __WEBPACK_IMPORTED_MODULE_17__utils_string_util__["a" /* StringUtil */],
                 __WEBPACK_IMPORTED_MODULE_13__services_popup_service__["a" /* PopupService */],
                 __WEBPACK_IMPORTED_MODULE_14__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_17__utils_store_util__["a" /* StoreUtil */]
+                __WEBPACK_IMPORTED_MODULE_18__utils_store_util__["a" /* StoreUtil */],
+                __WEBPACK_IMPORTED_MODULE_16__services_single_character_service__["a" /* SingleCharacterService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */]]
         })
@@ -232,12 +235,24 @@ var AppComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/components/character/character.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" maxlength=\"8\" class=\"form-control\" [(ngModel)]=\"term\" name=\"term\" placeholder=\"Input Character\" (keypress)=\"enterSearch($event.keyCode)\"\r\n            />\r\n            <div class=\"input-group-btn\">\r\n                <button class=\"btn btn-success\" (click)=\"searchCharacter()\">Search</button>\r\n            </div>\r\n        </div>\r\n        <h4>{{char.sc}}</h4>\r\n        <div class=\"embed-responsive embed-responsive-1by1\">\r\n            <img #gifImg class=\"embed-responsive-item\" [src]=\"gifUrl ? gifUrl : ''\" />\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n        <h4>Definition</h4>\r\n        {{char.definition}}\r\n    </div>\r\n</div>"
+
+/***/ }),
+
 /***/ "../../../../../src/app/components/character/character.component.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CharacterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_single_character_model__ = __webpack_require__("../../../../../src/app/models/single-character.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -248,20 +263,105 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
+
+
+
+
 var CharacterComponent = /** @class */ (function () {
-    function CharacterComponent() {
+    function CharacterComponent(stringUtil, popupService, renderer, singleCharacterService, storeUtil) {
+        this.stringUtil = stringUtil;
+        this.popupService = popupService;
+        this.renderer = renderer;
+        this.singleCharacterService = singleCharacterService;
+        this.storeUtil = storeUtil;
+        this.flagLockImg = false;
+        this.flagCustomImg = false;
+        this.char = new __WEBPACK_IMPORTED_MODULE_4__models_single_character_model__["a" /* SingleCharacter */]();
     }
+    CharacterComponent_1 = CharacterComponent;
+    Object.defineProperty(CharacterComponent, "LAST_TERM_STORE_KEY", {
+        get: function () { return 'LAST_TERM_STORE_KEY'; },
+        enumerable: true,
+        configurable: true
+    });
+    ;
     CharacterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.term = this.storeUtil.cache.get(CharacterComponent_1.LAST_TERM_STORE_KEY);
+        if (!this.term) {
+            this.term = '好';
+        }
+        this.searchCharacter();
+        this.renderer.listen(this.viewGifImg.nativeElement, "load", function (event) {
+            _this.flagLockImg = true;
+            if (_this.viewGifImg.nativeElement.complete) {
+                if (!_this.flagCustomImg) {
+                    setTimeout(function () {
+                        var c = document.createElement('canvas');
+                        var w = c.width = _this.viewGifImg.nativeElement.width;
+                        var h = c.height = _this.viewGifImg.nativeElement.height;
+                        c.getContext('2d').drawImage(_this.viewGifImg.nativeElement, 0, 0, w, h);
+                        _this.gifUrl = c.toDataURL("image/gif");
+                        _this.flagCustomImg = true;
+                        _this.flagLockImg = false;
+                    }, 4950);
+                }
+                else {
+                    _this.flagLockImg = false;
+                }
+            }
+        });
+        this.renderer.listen(this.viewGifImg.nativeElement, "click", function (event) {
+            if (!_this.flagLockImg) {
+                _this.loadGifImg();
+            }
+            else {
+                _this.popupService.showPopup('Locked', 'Locked');
+            }
+        });
     };
-    CharacterComponent = __decorate([
+    CharacterComponent.prototype.loadGifImg = function () {
+        this.gifUrl = this.char.sc ? '/assets/gif/char/' + this.char.sc : '';
+        this.flagCustomImg = false;
+    };
+    CharacterComponent.prototype.searchCharacter = function () {
+        var _this = this;
+        if (this.term != null && this.term.trim() != '') {
+            this.singleCharacterService.findByCharacter(this.term + '')
+                .then(function (entity) {
+                _this.char = entity;
+                _this.loadGifImg();
+                _this.storeUtil.cache.set(CharacterComponent_1.LAST_TERM_STORE_KEY, _this.term);
+            })
+                .catch(function (err) {
+                _this.popupService.showPopup("Search Character", err);
+            });
+        }
+    };
+    CharacterComponent.prototype.enterSearch = function (keyCode) {
+        if (keyCode == 13) {
+            this.searchCharacter();
+        }
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("gifImg"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
+    ], CharacterComponent.prototype, "viewGifImg", void 0);
+    CharacterComponent = CharacterComponent_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: "character-page",
-            template: "\n    Character\n    ",
+            template: __webpack_require__("../../../../../src/app/components/character/character.component.html"),
             styleUrls: []
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__utils_string_util__["a" /* StringUtil */],
+            __WEBPACK_IMPORTED_MODULE_3__services_popup_service__["a" /* PopupService */],
+            __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */],
+            __WEBPACK_IMPORTED_MODULE_5__services_single_character_service__["a" /* SingleCharacterService */],
+            __WEBPACK_IMPORTED_MODULE_1__utils_store_util__["a" /* StoreUtil */]])
     ], CharacterComponent);
     return CharacterComponent;
+    var CharacterComponent_1;
 }());
 
 
@@ -312,7 +412,7 @@ var DashBoardComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/common/navigation.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-inverse\">\r\n    <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n                aria-controls=\"navbar\">\r\n                <span class=\"sr-only\">Toggle navigation</span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" href=\"/\" ng-click=\"brandClicked()\">Learning Chinese</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav\">\r\n                <li *ngFor=\"let item of menuItems\" permission=\"{{item.permission}}\" [ngClass]=\"{'active': item === currentTab}\" (click)=\"changeCurrentTab(item)\">\r\n                    <a routerLink=\"{{item.path}}\" routerLinkActive=\"active\">{{item.title}}</a>\r\n                </li>\r\n            </ul>\r\n            <ul class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"isLoginEnable()\" [ngClass]=\"{'active': menuRightItems[0] === currentTab}\" (click)=\"changeCurrentTab(menuRightItems[0])\">\r\n                    <a routerLink=\"{{menuRightItems[0].path}}\">{{menuRightItems[0].title}}</a>\r\n                </li>\r\n                <li class=\"dropdown\" *ngIf=\"!isLoginEnable()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n                    <a href=\"javascript:void(0);\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{authService.getUsername()}}\r\n                        <span class=\"caret\"></span>\r\n                    </a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li>\r\n                            <a routerLink=\"{{menuRightItems[1].path}}\" (click)=\"changeCurrentTab(menuRightItems[1])\">Change Password</a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"javascript:void(0);\" (click)=\"logout()\">Log Out</a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>"
+module.exports = "<nav class=\"navbar navbar-inverse\">\r\n    <div class=\"container\">\r\n        <div class=\"navbar-header\">\r\n            <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#navbar\" aria-expanded=\"false\"\r\n                aria-controls=\"navbar\">\r\n                <span class=\"sr-only\">Toggle navigation</span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n                <span class=\"icon-bar\"></span>\r\n            </button>\r\n            <a class=\"navbar-brand\" href=\"/\" ng-click=\"brandClicked()\">Learning Chinese</a>\r\n        </div>\r\n        <div id=\"navbar\" class=\"collapse navbar-collapse\">\r\n            <ul class=\"nav navbar-nav\">\r\n                <li *ngFor=\"let item of menuItems\" permission=\"{{item.permission}}\" [ngClass]=\"{'active': item === currentTab}\" (click)=\"changeCurrentTab(item)\">\r\n                    <a routerLink=\"{{item.path}}\" routerLinkActive=\"active\">{{item.title}}</a>\r\n                </li>\r\n            </ul>\r\n            <ul *ngIf=\"isRightMenuEnable()\" class=\"nav navbar-nav navbar-right\">\r\n                <li *ngIf=\"isLogedIn()\" [ngClass]=\"{'active': menuRightItems[0] === currentTab}\" (click)=\"changeCurrentTab(menuRightItems[0])\">\r\n                    <a routerLink=\"{{menuRightItems[0].path}}\">{{menuRightItems[0].title}}</a>\r\n                </li>\r\n                <li class=\"dropdown\" *ngIf=\"!isLogedIn()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n                    <a href=\"javascript:void(0);\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">{{authService.getUsername()}}\r\n                        <span class=\"caret\"></span>\r\n                    </a>\r\n                    <ul class=\"dropdown-menu\">\r\n                        <li>\r\n                            <a routerLink=\"{{menuRightItems[1].path}}\" (click)=\"changeCurrentTab(menuRightItems[1])\">Change Password</a>\r\n                        </li>\r\n                        <li>\r\n                            <a href=\"javascript:void(0);\" (click)=\"logout()\">Log Out</a>\r\n                        </li>\r\n                    </ul>\r\n                </li>\r\n            </ul>\r\n        </div>\r\n    </div>\r\n</nav>"
 
 /***/ }),
 
@@ -382,9 +482,11 @@ var NavigationComponent = /** @class */ (function () {
     NavigationComponent.prototype.changeCurrentTab = function (menuItem) {
         this.currentTab = menuItem;
     };
-    NavigationComponent.prototype.isLoginEnable = function () {
-        //return !this.authService.isAuthenticated();
+    NavigationComponent.prototype.isRightMenuEnable = function () {
         return false;
+    };
+    NavigationComponent.prototype.isLoggedIn = function () {
+        return !this.authService.isAuthenticated();
     };
     NavigationComponent.prototype.logout = function () {
         var _this = this;
@@ -530,6 +632,50 @@ var PermissionDirective = /** @class */ (function () {
     ], PermissionDirective);
     return PermissionDirective;
 }());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/models/entity.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Entity; });
+var Entity = /** @class */ (function () {
+    function Entity() {
+    }
+    return Entity;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/models/single-character.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SingleCharacter; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__entity_model__ = __webpack_require__("../../../../../src/app/models/entity.model.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+
+var SingleCharacter = /** @class */ (function (_super) {
+    __extends(SingleCharacter, _super);
+    function SingleCharacter() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return SingleCharacter;
+}(__WEBPACK_IMPORTED_MODULE_0__entity_model__["a" /* Entity */]));
 
 
 
@@ -844,6 +990,104 @@ var Service = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/services/single-character.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SingleCharacterService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_single_character_model__ = __webpack_require__("../../../../../src/app/models/single-character.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__("../../../../../src/app/services/service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__configs_app_config__ = __webpack_require__("../../../../../src/app/configs/app.config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+var SingleCharacterService = /** @class */ (function (_super) {
+    __extends(SingleCharacterService, _super);
+    function SingleCharacterService(http, appConfig, stringUtil) {
+        var _this = _super.call(this, http, appConfig.serverApiUrl + "/api/v1/character") || this;
+        _this.appConfig = appConfig;
+        _this.stringUtil = stringUtil;
+        return _this;
+    }
+    /**
+     * Get by character
+     * @param {string} c - a character
+     */
+    SingleCharacterService.prototype.findByCharacter = function (c) {
+        if (!c) {
+            return Promise.reject('A character is required.');
+        }
+        c = c.trim();
+        if (!this.stringUtil.checkChineseCharacter(c)) {
+            return Promise.reject("\"" + c + "\" is not Chinese character.");
+        }
+        if (c.length > 1) {
+            c = c.charAt(0);
+        }
+        //dummy check
+        return this.checkImage('/assets/gif/char/' + c)
+            .then(function (response) {
+            console.log(response);
+            var char = new __WEBPACK_IMPORTED_MODULE_2__models_single_character_model__["a" /* SingleCharacter */]();
+            char.sc = c;
+            char.tc = char.sc;
+            char.definition = 'Definition of ' + c;
+            char.pinyinNum = 'pinyin num of ' + c;
+            char.pinyinTone = 'pinyin of ' + c;
+            return char;
+        })
+            .catch(function (err) {
+            return Promise.reject('Character is not found.');
+        });
+    };
+    SingleCharacterService.prototype.checkImage = function (imageSrc) {
+        return new Promise(function (resolve, reject) {
+            var img = new Image();
+            img.onload = function (e) {
+                resolve(true);
+            };
+            img.onerror = function (e) {
+                reject(e);
+            };
+            img.src = imageSrc;
+        });
+    };
+    SingleCharacterService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_4__configs_app_config__["a" /* AppConfig */], __WEBPACK_IMPORTED_MODULE_5__utils_string_util__["a" /* StringUtil */]])
+    ], SingleCharacterService);
+    return SingleCharacterService;
+}(__WEBPACK_IMPORTED_MODULE_3__service__["a" /* Service */]));
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/services/user.service.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1097,6 +1341,18 @@ var StringUtil = /** @class */ (function () {
         }
         return str;
     };
+    StringUtil.prototype.checkChineseCharacter = function (str) {
+        if (!str) {
+            return false;
+        }
+        var regexChineseChar = new RegExp("^[\u4E00-\uFA29]*$");
+        var regexNonChineseChar = new RegExp("^[\uE7C7-\uE7F3]*$");
+        str = str.replace(/\s/g, '');
+        if (!regexChineseChar.test(str) || regexNonChineseChar.test(str)) {
+            return false;
+        }
+        return true;
+    };
     StringUtil.UNSIGN_CHAR_MAP = {
         "Á": "A",
         "À": "A",
@@ -1283,7 +1539,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_14" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });
