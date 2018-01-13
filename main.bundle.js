@@ -32,21 +32,25 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__components_common_dash_board_component__ = __webpack_require__("../../../../../src/app/components/common/dash-board.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__components_about_about_component__ = __webpack_require__("../../../../../src/app/components/about/about.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__components_character_character_component__ = __webpack_require__("../../../../../src/app/components/character/character.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__configs_app_config__ = __webpack_require__("../../../../../src/app/configs/app.config.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__directives_permission_directive__ = __webpack_require__("../../../../../src/app/directives/permission.directive.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__components_common_popup_component__ = __webpack_require__("../../../../../src/app/components/common/popup.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__components_common_pagination_component__ = __webpack_require__("../../../../../src/app/components/common/pagination.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__configs_app_config__ = __webpack_require__("../../../../../src/app/configs/app.config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__directives_permission_directive__ = __webpack_require__("../../../../../src/app/directives/permission.directive.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__components_common_popup_component__ = __webpack_require__("../../../../../src/app/components/common/popup.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__services_user_service__ = __webpack_require__("../../../../../src/app/services/user.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pipes_sanitize_html_pipe__ = __webpack_require__("../../../../../src/app/pipes/sanitize-html.pipe.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -80,20 +84,22 @@ var AppModule = /** @class */ (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__components_common_navigation_component__["a" /* NavigationComponent */],
-                __WEBPACK_IMPORTED_MODULE_11__directives_permission_directive__["a" /* PermissionDirective */],
-                __WEBPACK_IMPORTED_MODULE_12__components_common_popup_component__["a" /* PopupComponent */],
+                __WEBPACK_IMPORTED_MODULE_12__directives_permission_directive__["a" /* PermissionDirective */],
+                __WEBPACK_IMPORTED_MODULE_13__components_common_popup_component__["a" /* PopupComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__components_common_dash_board_component__["a" /* DashBoardComponent */],
                 __WEBPACK_IMPORTED_MODULE_8__components_about_about_component__["a" /* AboutComponent */],
-                __WEBPACK_IMPORTED_MODULE_9__components_character_character_component__["a" /* CharacterComponent */]
+                __WEBPACK_IMPORTED_MODULE_9__components_character_character_component__["a" /* CharacterComponent */],
+                __WEBPACK_IMPORTED_MODULE_10__components_common_pagination_component__["a" /* PaginationComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__pipes_sanitize_html_pipe__["a" /* SanitizeHtmlPipe */]
             ],
             providers: [
-                __WEBPACK_IMPORTED_MODULE_10__configs_app_config__["a" /* AppConfig */],
-                __WEBPACK_IMPORTED_MODULE_15__services_auth_service__["a" /* AuthService */],
-                __WEBPACK_IMPORTED_MODULE_17__utils_string_util__["a" /* StringUtil */],
-                __WEBPACK_IMPORTED_MODULE_13__services_popup_service__["a" /* PopupService */],
-                __WEBPACK_IMPORTED_MODULE_14__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_18__utils_store_util__["a" /* StoreUtil */],
-                __WEBPACK_IMPORTED_MODULE_16__services_single_character_service__["a" /* SingleCharacterService */]
+                __WEBPACK_IMPORTED_MODULE_11__configs_app_config__["a" /* AppConfig */],
+                __WEBPACK_IMPORTED_MODULE_16__services_auth_service__["a" /* AuthService */],
+                __WEBPACK_IMPORTED_MODULE_18__utils_string_util__["a" /* StringUtil */],
+                __WEBPACK_IMPORTED_MODULE_14__services_popup_service__["a" /* PopupService */],
+                __WEBPACK_IMPORTED_MODULE_15__services_user_service__["a" /* UserService */],
+                __WEBPACK_IMPORTED_MODULE_19__utils_store_util__["a" /* StoreUtil */],
+                __WEBPACK_IMPORTED_MODULE_17__services_single_character_service__["a" /* SingleCharacterService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_5__components_app_component__["a" /* AppComponent */]]
         })
@@ -134,11 +140,15 @@ var appRoutes = [
         component: __WEBPACK_IMPORTED_MODULE_3__components_character_character_component__["a" /* CharacterComponent */]
     },
     {
+        path: "character/:char",
+        component: __WEBPACK_IMPORTED_MODULE_3__components_character_character_component__["a" /* CharacterComponent */]
+    },
+    {
         path: "about",
         component: __WEBPACK_IMPORTED_MODULE_2__components_about_about_component__["a" /* AboutComponent */]
     }
 ];
-var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["b" /* RouterModule */].forRoot(appRoutes);
+var routing = __WEBPACK_IMPORTED_MODULE_0__angular_router__["c" /* RouterModule */].forRoot(appRoutes);
 
 
 /***/ }),
@@ -238,7 +248,7 @@ var AppComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/components/character/character.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" maxlength=\"8\" class=\"form-control\" [(ngModel)]=\"term\" name=\"term\" placeholder=\"Input Character\" (keypress)=\"enterSearch($event.keyCode)\"\r\n            />\r\n            <div class=\"input-group-btn\">\r\n                <button class=\"btn btn-success\" (click)=\"searchCharacter()\">Search</button>\r\n            </div>\r\n        </div>\r\n        <h4>{{char.sc}}</h4>\r\n        <div class=\"embed-responsive embed-responsive-1by1\">\r\n            <img #gifImg class=\"embed-responsive-item\" [src]=\"gifUrl ? gifUrl : ''\" />\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n        <h4>Definition</h4>\r\n        {{char.definition}}\r\n    </div>\r\n</div>"
+module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n        <div class=\"input-group\">\r\n            <input type=\"text\" maxlength=\"8\" class=\"form-control\" [(ngModel)]=\"term\" name=\"term\" placeholder=\"Input Character\" (keypress)=\"enterSearch($event.keyCode)\"\r\n            />\r\n            <div class=\"input-group-btn\">\r\n                <button class=\"btn btn-success\" (click)=\"searchCharacter()\">Search</button>\r\n            </div>\r\n        </div>\r\n        <h4>{{char.sc}}</h4>\r\n        <div class=\"embed-responsive embed-responsive-1by1\">\r\n            <img #gifImg class=\"embed-responsive-item\" [src]=\"gifUrl ? gifUrl : ''\" />\r\n        </div>\r\n    </div>\r\n    <div class=\"col-sm-8\">\r\n        <h4>Definition</h4>\r\n        <div [innerHtml]=\"prettyDefinition(char.definition) | sanitizeHtml\"></div>\r\n    </div>\r\n</div>"
 
 /***/ }),
 
@@ -248,11 +258,12 @@ module.exports = "<div class=\"row\">\r\n    <div class=\"col-sm-4\">\r\n       
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CharacterComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_single_character_model__ = __webpack_require__("../../../../../src/app/models/single-character.model.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_single_character_model__ = __webpack_require__("../../../../../src/app/models/single-character.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -268,16 +279,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CharacterComponent = /** @class */ (function () {
-    function CharacterComponent(stringUtil, popupService, renderer, singleCharacterService, storeUtil) {
+    function CharacterComponent(stringUtil, popupService, renderer, singleCharacterService, storeUtil, route) {
         this.stringUtil = stringUtil;
         this.popupService = popupService;
         this.renderer = renderer;
         this.singleCharacterService = singleCharacterService;
         this.storeUtil = storeUtil;
+        this.route = route;
         this.flagLockImg = false;
         this.flagCustomImg = false;
-        this.char = new __WEBPACK_IMPORTED_MODULE_4__models_single_character_model__["a" /* SingleCharacter */]();
+        this.char = new __WEBPACK_IMPORTED_MODULE_5__models_single_character_model__["a" /* SingleCharacter */]();
     }
     CharacterComponent_1 = CharacterComponent;
     Object.defineProperty(CharacterComponent, "LAST_TERM_STORE_KEY", {
@@ -288,11 +301,13 @@ var CharacterComponent = /** @class */ (function () {
     ;
     CharacterComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.term = this.storeUtil.cache.get(CharacterComponent_1.LAST_TERM_STORE_KEY);
-        if (!this.term) {
-            this.term = '好';
-        }
-        this.searchCharacter();
+        this.sub = this.route.params.subscribe(function (params) {
+            _this.term = params['char'];
+            if (!_this.term) {
+                _this.term = _this.storeUtil.cache.has(CharacterComponent_1.LAST_TERM_STORE_KEY) ? _this.storeUtil.cache.get(CharacterComponent_1.LAST_TERM_STORE_KEY) : '好';
+            }
+            _this.searchCharacter;
+        });
         this.renderer.listen(this.viewGifImg.nativeElement, "load", function (event) {
             _this.flagLockImg = true;
             if (_this.viewGifImg.nativeElement.complete) {
@@ -321,6 +336,9 @@ var CharacterComponent = /** @class */ (function () {
             }
         });
     };
+    CharacterComponent.prototype.ngOnDestroy = function () {
+        this.sub.unsubscribe();
+    };
     CharacterComponent.prototype.loadGifImg = function () {
         this.gifUrl = this.char.sc ? '/assets/gif/char/' + this.char.sc : '';
         this.flagCustomImg = false;
@@ -328,7 +346,7 @@ var CharacterComponent = /** @class */ (function () {
     CharacterComponent.prototype.searchCharacter = function () {
         var _this = this;
         if (this.term != null && this.term.trim() != '') {
-            this.singleCharacterService.findByCharacter(this.term + '')
+            this.singleCharacterService.findByCharacter(this.term)
                 .then(function (entity) {
                 _this.char = entity;
                 _this.loadGifImg();
@@ -344,6 +362,30 @@ var CharacterComponent = /** @class */ (function () {
             this.searchCharacter();
         }
     };
+    CharacterComponent.prototype.prettyDefinition = function (s) {
+        var html = '';
+        if (s) {
+            var ulOpen = false;
+            var lines = s.split('\n').filter(function (t) { return !!t && t.length > 0; });
+            for (var i = 0, n = lines.length; i < n; i++) {
+                if (/^\s+/.test(lines[i])) {
+                    if (!ulOpen) {
+                        html += '<ul>';
+                        ulOpen = true;
+                    }
+                    html += "<li>" + lines[i] + "</li>";
+                }
+                else {
+                    if (ulOpen) {
+                        html += '</ul>';
+                        ulOpen = false;
+                    }
+                    html += "<p>" + lines[i] + "</p>";
+                }
+            }
+        }
+        return html;
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])("gifImg"),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["t" /* ElementRef */])
@@ -354,17 +396,25 @@ var CharacterComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/components/character/character.component.html"),
             styleUrls: []
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__utils_string_util__["a" /* StringUtil */],
-            __WEBPACK_IMPORTED_MODULE_3__services_popup_service__["a" /* PopupService */],
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__utils_string_util__["a" /* StringUtil */],
+            __WEBPACK_IMPORTED_MODULE_4__services_popup_service__["a" /* PopupService */],
             __WEBPACK_IMPORTED_MODULE_0__angular_core__["V" /* Renderer */],
-            __WEBPACK_IMPORTED_MODULE_5__services_single_character_service__["a" /* SingleCharacterService */],
-            __WEBPACK_IMPORTED_MODULE_1__utils_store_util__["a" /* StoreUtil */]])
+            __WEBPACK_IMPORTED_MODULE_6__services_single_character_service__["a" /* SingleCharacterService */],
+            __WEBPACK_IMPORTED_MODULE_2__utils_store_util__["a" /* StoreUtil */],
+            __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* ActivatedRoute */]])
     ], CharacterComponent);
     return CharacterComponent;
     var CharacterComponent_1;
 }());
 
 
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/common/dash-board.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<h3>The most common Chinese characters in order of frequency</h3>\r\n\r\n<pagination [pagination]=\"pagination\" (onSelectPage)=\"loadPage($event)\" (onPrePagination)=\"detectPrePagination($event)\" (onNextPagination)=\"detectNextPagination($event)\"></pagination>\r\n<div class=\"row\">\r\n    <table class=\"table\">\r\n        <thead>\r\n            <th class=\"col-sm-1 text-center\">#</th>\r\n            <th class=\"col-sm-3 text-center\">Character</th>\r\n            <th class=\"col-sm-8 text-center\">Pronunciations and explanations</th>\r\n        </thead>\r\n        <tbody>\r\n            <tr *ngFor=\"let item of characters\">\r\n                <td class=\"text-center\">{{item._id}}</td>\r\n                <td>\r\n                    <div class=\"text-center char-box\">\r\n                        <a routerLink=\"/character/{{item.sc}}\">{{item.sc}}</a>\r\n                        <span *ngIf=\"!!item.tc\">\r\n                            (F\r\n                            <a routerLink=\"/character/{{item.tc}}\">{{item.tc}}</a>)\r\n                        </span>\r\n                    </div>\r\n                </td>\r\n                <td>\r\n                    <div [innerHTML]=\"prettyDefinition(item.definition) | sanitizeHtml\"></div>\r\n                </td>\r\n            </tr>\r\n        </tbody>\r\n    </table>\r\n</div>\r\n<pagination [pagination]=\"pagination\" (onSelectPage)=\"loadPage($event)\" (onPrePagination)=\"detectPrePagination($event)\" (onNextPagination)=\"detectNextPagination($event)\"></pagination>"
 
 /***/ }),
 
@@ -375,6 +425,9 @@ var CharacterComponent = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DashBoardComponent; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_popup_service__ = __webpack_require__("../../../../../src/app/services/popup.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__services_single_character_service__ = __webpack_require__("../../../../../src/app/services/single-character.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__models_pagination_model__ = __webpack_require__("../../../../../src/app/models/pagination.model.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -386,21 +439,96 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 var DashBoardComponent = /** @class */ (function () {
-    function DashBoardComponent(popupService) {
+    function DashBoardComponent(popupService, singleCharacterService, storeUtil) {
         this.popupService = popupService;
+        this.singleCharacterService = singleCharacterService;
+        this.storeUtil = storeUtil;
+        this.characters = [];
     }
     DashBoardComponent.prototype.ngOnInit = function () {
+        var page = this.storeUtil.cache.get('dash-board:page');
+        this.page = page ? +page : 0;
+        this.pagination = new __WEBPACK_IMPORTED_MODULE_3__models_pagination_model__["a" /* Pagination */]();
+        this.pagination.pageSize = 20;
+        this.pagination.currentPage = -1;
+        this.pagination.maxNumOfPages = 7;
+        this.pagination.endPage = this.pagination.maxNumOfPages - 1;
+        this.loadPage(this.page);
     };
-    DashBoardComponent.prototype.ngOnDestroy = function () {
+    DashBoardComponent.prototype.loadPage = function (page, forceLoad) {
+        var _this = this;
+        if (forceLoad === void 0) { forceLoad = false; }
+        if (this.isPending) {
+            return;
+        }
+        this.isPending = true;
+        if (forceLoad === true || this.pagination.currentPage !== page) {
+            this.singleCharacterService.findCommonCharacters(page, this.pagination.pageSize).then(function (hitList) {
+                _this.page = page;
+                _this.total = hitList.total;
+                _this.characters = hitList.hits;
+                _this.pagination.numOfPages = Math.floor(hitList.total / _this.pagination.pageSize) + 1;
+                if (_this.pagination.numOfPages < _this.pagination.maxNumOfPages) {
+                    _this.pagination.endPage = _this.pagination.numOfPages - 1;
+                }
+                _this.pagination.currentPage = page;
+            }).catch(function (err) {
+                console.log("Load common characters failed", err);
+                _this.popupService.showPopup('Load Data', 'Fail to load common characters.');
+            }).then(function () { return _this.isPending = false; });
+        }
+    };
+    DashBoardComponent.prototype.detectPrePagination = function () {
+        var p = this.pagination.detectPrePagination();
+        if (p !== this.pagination) {
+            this.pagination = p;
+            this.loadPage(this.pagination.currentPage, true);
+        }
+    };
+    DashBoardComponent.prototype.detectNextPagination = function () {
+        var p = this.pagination.detectNextPagination();
+        if (p !== this.pagination) {
+            this.pagination = p;
+            this.loadPage(this.pagination.currentPage, true);
+        }
+    };
+    DashBoardComponent.prototype.prettyDefinition = function (s) {
+        var html = '';
+        if (s) {
+            var ulOpen = false;
+            var lines = s.split('\n').filter(function (t) { return !!t && t.length > 0; });
+            for (var i = 0, n = lines.length; i < n; i++) {
+                if (/^\s+/.test(lines[i])) {
+                    if (!ulOpen) {
+                        html += '<ul>';
+                        ulOpen = true;
+                    }
+                    html += "<li>" + lines[i] + "</li>";
+                }
+                else {
+                    if (ulOpen) {
+                        html += '</ul>';
+                        ulOpen = false;
+                    }
+                    html += "<p>" + lines[i] + "</p>";
+                }
+            }
+        }
+        return html;
     };
     DashBoardComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: "dashboard",
-            template: "\n    Dash board\n    ",
-            styleUrls: []
+            template: __webpack_require__("../../../../../src/app/components/common/dash-board.component.html"),
+            styleUrls: [],
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_popup_service__["a" /* PopupService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_popup_service__["a" /* PopupService */],
+            __WEBPACK_IMPORTED_MODULE_2__services_single_character_service__["a" /* SingleCharacterService */],
+            __WEBPACK_IMPORTED_MODULE_4__utils_store_util__["a" /* StoreUtil */]])
     ], DashBoardComponent);
     return DashBoardComponent;
 }());
@@ -503,9 +631,78 @@ var NavigationComponent = /** @class */ (function () {
             template: __webpack_require__("../../../../../src/app/components/common/navigation.component.html"),
             styleUrls: []
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__configs_app_config__["a" /* AppConfig */], __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_4__services_popup_service__["a" /* PopupService */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__configs_app_config__["a" /* AppConfig */], __WEBPACK_IMPORTED_MODULE_3__services_auth_service__["a" /* AuthService */], __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_4__services_popup_service__["a" /* PopupService */]])
     ], NavigationComponent);
     return NavigationComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/common/pagination.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<nav aria-label=\"Page navigation\">\r\n    <ul class=\"pagination\">\r\n        <li *ngIf=\"pagination.startPage > 0\">\r\n            <a href=\"javascript:void(0)\" aria-label=\"Previous\" (click)=\"invokePrePagination()\">\r\n                <span aria-hidden=\"true\">&laquo;</span>\r\n            </a>\r\n        </li>\r\n        <li *ngFor=\"let i of pagination.generatePageIds()\" [ngClass]=\"{'active': pagination.currentPage === i}\">\r\n            <a href=\"javascript:void(0)\" (click)=\"invokeSelectPage(i)\">{{i+1}}</a>\r\n        </li>\r\n        <li *ngIf=\"pagination.endPage < pagination.numOfPages - 1\">\r\n            <a href=\"javascript:void(0)\" aria-label=\"Next\" (click)=\"invokeNextPagination()\">\r\n                <span aria-hidden=\"true\">&raquo;</span>\r\n            </a>\r\n        </li>\r\n    </ul>\r\n</nav>"
+
+/***/ }),
+
+/***/ "../../../../../src/app/components/common/pagination.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PaginationComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_pagination_model__ = __webpack_require__("../../../../../src/app/models/pagination.model.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var PaginationComponent = /** @class */ (function () {
+    function PaginationComponent() {
+        this.onSelectPage = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.onPrePagination = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+        this.onNextPagination = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */]();
+    }
+    PaginationComponent.prototype.invokeSelectPage = function (e) {
+        this.onSelectPage.next(e);
+    };
+    PaginationComponent.prototype.invokePrePagination = function (e) {
+        this.onPrePagination.next(e);
+    };
+    PaginationComponent.prototype.invokeNextPagination = function (e) {
+        this.onNextPagination.next(e);
+    };
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["D" /* Input */])("pagination"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1__models_pagination_model__["a" /* Pagination */])
+    ], PaginationComponent.prototype, "pagination", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])("onSelectPage"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], PaginationComponent.prototype, "onSelectPage", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])("onPrePagination"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], PaginationComponent.prototype, "onPrePagination", void 0);
+    __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["P" /* Output */])("onNextPagination"),
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_0__angular_core__["v" /* EventEmitter */])
+    ], PaginationComponent.prototype, "onNextPagination", void 0);
+    PaginationComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: "pagination",
+            template: __webpack_require__("../../../../../src/app/components/common/pagination.component.html")
+        })
+    ], PaginationComponent);
+    return PaginationComponent;
 }());
 
 
@@ -652,6 +849,108 @@ var Entity = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/models/hit-list.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HitList; });
+var HitList = /** @class */ (function () {
+    function HitList(data) {
+        this.total = 0;
+        this.count = 0;
+        this.hits = [];
+        if (typeof data === "object" && data !== null) {
+            this.total = data["total"];
+            this.count = data["count"];
+            for (var i = 0; i < this.count; i++) {
+                var item = data["hits"][i];
+                this.hits.push(item);
+            }
+        }
+    }
+    return HitList;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/models/pagination.model.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Pagination; });
+var Pagination = /** @class */ (function () {
+    function Pagination() {
+        this.pageSize = 20;
+        this.maxNumOfPages = 10;
+        this.numOfPages = 1;
+        this.startPage = 0;
+        this.endPage = 0;
+        this.currentPage = 0;
+    }
+    Pagination.prototype.generatePageIds = function () {
+        var pageIds = [];
+        for (var i = this.startPage; i <= this.endPage; i++) {
+            pageIds.push(i);
+        }
+        return pageIds;
+    };
+    Pagination.prototype.detectNextPagination = function () {
+        if (this.numOfPages > this.maxNumOfPages) {
+            var curr = this.endPage + 1;
+            if (curr < this.numOfPages) {
+                var end = curr + Math.floor(this.maxNumOfPages / 2);
+                while (end >= this.numOfPages) {
+                    end--;
+                }
+                var start = curr - Math.floor(this.maxNumOfPages / 2);
+                while (start < 0) {
+                    start++;
+                }
+                var newPagination = new Pagination();
+                newPagination.pageSize = this.pageSize;
+                newPagination.maxNumOfPages = this.maxNumOfPages;
+                newPagination.numOfPages = this.numOfPages;
+                newPagination.startPage = start;
+                newPagination.endPage = end;
+                newPagination.currentPage = curr;
+                return newPagination;
+            }
+        }
+        return this;
+    };
+    Pagination.prototype.detectPrePagination = function () {
+        if (this.numOfPages > this.maxNumOfPages) {
+            var curr = this.startPage - 1;
+            if (curr >= 0) {
+                var end = curr + Math.floor(this.maxNumOfPages / 2);
+                while (end >= this.numOfPages) {
+                    end--;
+                }
+                var start = curr - Math.floor(this.maxNumOfPages / 2);
+                while (start < 0) {
+                    start++;
+                }
+                var newPagination = new Pagination();
+                newPagination.pageSize = this.pageSize;
+                newPagination.maxNumOfPages = this.maxNumOfPages;
+                newPagination.numOfPages = this.numOfPages;
+                newPagination.startPage = start;
+                newPagination.endPage = end;
+                newPagination.currentPage = curr;
+                return newPagination;
+            }
+        }
+        return this;
+    };
+    return Pagination;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/models/single-character.model.ts":
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -676,6 +975,44 @@ var SingleCharacter = /** @class */ (function (_super) {
     }
     return SingleCharacter;
 }(__WEBPACK_IMPORTED_MODULE_0__entity_model__["a" /* Entity */]));
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/pipes/sanitize-html.pipe.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SanitizeHtmlPipe; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__("../../../platform-browser/esm5/platform-browser.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var SanitizeHtmlPipe = /** @class */ (function () {
+    function SanitizeHtmlPipe(_sanitizer) {
+        this._sanitizer = _sanitizer;
+    }
+    SanitizeHtmlPipe.prototype.transform = function (v) {
+        return this._sanitizer.bypassSecurityTrustHtml(v);
+    };
+    SanitizeHtmlPipe = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Pipe */])({
+            name: 'sanitizeHtml'
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["b" /* DomSanitizer */]])
+    ], SanitizeHtmlPipe);
+    return SanitizeHtmlPipe;
+}());
 
 
 
@@ -800,7 +1137,7 @@ var AuthService = /** @class */ (function () {
     };
     AuthService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["a" /* Router */], __WEBPACK_IMPORTED_MODULE_3__user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__configs_app_config__["a" /* AppConfig */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* Router */], __WEBPACK_IMPORTED_MODULE_3__user_service__["a" /* UserService */], __WEBPACK_IMPORTED_MODULE_4__configs_app_config__["a" /* AppConfig */]])
     ], AuthService);
     return AuthService;
 }());
@@ -997,10 +1334,11 @@ var Service = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SingleCharacterService; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__models_single_character_model__ = __webpack_require__("../../../../../src/app/models/single-character.model.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__service__ = __webpack_require__("../../../../../src/app/services/service.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__configs_app_config__ = __webpack_require__("../../../../../src/app/configs/app.config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__service__ = __webpack_require__("../../../../../src/app/services/service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__configs_app_config__ = __webpack_require__("../../../../../src/app/configs/app.config.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models_hit_list_model__ = __webpack_require__("../../../../../src/app/models/hit-list.model.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_string_util__ = __webpack_require__("../../../../../src/app/utils/string.util.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_store_util__ = __webpack_require__("../../../../../src/app/utils/store.util.ts");
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -1026,19 +1364,29 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SingleCharacterService = /** @class */ (function (_super) {
     __extends(SingleCharacterService, _super);
-    function SingleCharacterService(http, appConfig, stringUtil) {
+    function SingleCharacterService(http, appConfig, stringUtil, storeUtil) {
         var _this = _super.call(this, http, appConfig.serverApiUrl + "/api/v1/character") || this;
         _this.appConfig = appConfig;
         _this.stringUtil = stringUtil;
+        _this.storeUtil = storeUtil;
         return _this;
     }
+    SingleCharacterService_1 = SingleCharacterService;
+    Object.defineProperty(SingleCharacterService, "CHAR_MAP_IDX", {
+        get: function () { return 'CHAR_MAP_IDX'; },
+        enumerable: true,
+        configurable: true
+    });
+    ;
     /**
      * Get by character
      * @param {string} c - a character
      */
     SingleCharacterService.prototype.findByCharacter = function (c) {
+        var _this = this;
         if (!c) {
             return Promise.reject('A character is required.');
         }
@@ -1052,14 +1400,7 @@ var SingleCharacterService = /** @class */ (function (_super) {
         //dummy check
         return this.checkImage('/assets/gif/char/' + c)
             .then(function (response) {
-            console.log(response);
-            var char = new __WEBPACK_IMPORTED_MODULE_2__models_single_character_model__["a" /* SingleCharacter */]();
-            char.sc = c;
-            char.tc = char.sc;
-            char.definition = 'Definition of ' + c;
-            char.pinyinNum = 'pinyin num of ' + c;
-            char.pinyinTone = 'pinyin of ' + c;
-            return char;
+            return _this.findSingleCharacter(c);
         })
             .catch(function (err) {
             return Promise.reject('Character is not found.');
@@ -1077,12 +1418,61 @@ var SingleCharacterService = /** @class */ (function (_super) {
             img.src = imageSrc;
         });
     };
-    SingleCharacterService = __decorate([
+    SingleCharacterService.prototype.findSingleCharacter = function (c) {
+        var _this = this;
+        return this.findCharacterIndexPage(c)
+            .then(function (idx) {
+            return _this.findCommonCharacters(idx, 20).then(function (hitList) {
+                var char = hitList.hits.find(function (t) { return t.sc === c || t.tc === c; });
+                if (!char) {
+                    throw Error("Not found character \"" + c + "\"");
+                }
+                return char;
+            });
+        }).catch(function (err) { return err; });
+    };
+    SingleCharacterService.prototype.findCharacterIndexPage = function (c) {
+        var _this = this;
+        return new Promise(function (resolve, reject) {
+            if (_this.storeUtil.cache.has(SingleCharacterService_1.CHAR_MAP_IDX)) {
+                var charMapIdx = _this.storeUtil.cache.get(SingleCharacterService_1.CHAR_MAP_IDX);
+                resolve(+charMapIdx[c]);
+            }
+            else {
+                return _this.http.get('/assets/json/common-characters/index.json')
+                    .toPromise()
+                    .then(function (res) {
+                    var charMapIdx = res.json();
+                    _this.storeUtil.cache.set(SingleCharacterService_1.CHAR_MAP_IDX, charMapIdx);
+                    return +charMapIdx[c];
+                }).catch(function (err) { return reject(err); });
+            }
+        });
+    };
+    /**
+     * Find common characters
+     * @param page {number} - page index
+     * @param size {number} - page size
+     */
+    SingleCharacterService.prototype.findCommonCharacters = function (page, size) {
+        if (page === void 0) { page = 0; }
+        var url = "/assets/json/common-characters/" + page + ".json";
+        return this.http.get(url)
+            .toPromise()
+            .then(function (response) {
+            var data = response.json();
+            ;
+            return new __WEBPACK_IMPORTED_MODULE_4__models_hit_list_model__["a" /* HitList */](data);
+        })
+            .catch(this.handleError);
+    };
+    SingleCharacterService = SingleCharacterService_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_4__configs_app_config__["a" /* AppConfig */], __WEBPACK_IMPORTED_MODULE_5__utils_string_util__["a" /* StringUtil */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */], __WEBPACK_IMPORTED_MODULE_3__configs_app_config__["a" /* AppConfig */], __WEBPACK_IMPORTED_MODULE_5__utils_string_util__["a" /* StringUtil */], __WEBPACK_IMPORTED_MODULE_6__utils_store_util__["a" /* StoreUtil */]])
     ], SingleCharacterService);
     return SingleCharacterService;
-}(__WEBPACK_IMPORTED_MODULE_3__service__["a" /* Service */]));
+    var SingleCharacterService_1;
+}(__WEBPACK_IMPORTED_MODULE_2__service__["a" /* Service */]));
 
 
 
