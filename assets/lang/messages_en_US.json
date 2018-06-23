@@ -1,0 +1,21 @@
+{
+    "menu.items.home": "Home",
+    "menu.items.character": "Character",
+    "menu.items.about": "About",
+    "menu.items.login": "Log In",
+    "menu.items.logout": "Log Out",
+    "menu.items.change_password": "Change Password",
+    "lbl.home.title": "The most common Chinese characters in order of frequency",
+    "lbl.fields.character": "Character",
+    "lbl.fields.pronunciations_explanations": "Pronunciations and explanations",
+    "lbl.btn.search": "Search",
+    "lbl.fields.definition": "Definition",
+    "msg.title.load_data": "Load data",
+    "msg.err.load_data_fail": "Failed to load data. Please try again later.",
+    "msg.title.search_character": "Search character",
+    "msg.err.search_character_fail": "Failed to search character.",
+    "msg.err.is_not_chinese_character": "{0} is not Chinese character",
+    "msg.err.character_empty": "Character is required.",
+    "msg.err.character_not_found": "The charater is not found.",
+    "msg.info.not_found_definition": "Not found definition."
+}

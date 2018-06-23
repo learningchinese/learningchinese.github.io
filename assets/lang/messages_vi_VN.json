@@ -1,0 +1,21 @@
+{
+    "menu.items.home": "Trang chủ",
+    "menu.items.character": "Hán tự",
+    "menu.items.about": "Thông tin",
+    "menu.items.login": "Đăng nhập",
+    "menu.items.logout": "Đăng xuất",
+    "menu.items.change_password": "Đổi mật khẩu",
+    "lbl.home.title": "Những Hán tự phổ biến thường dùng",
+    "lbl.fields.character": "Hán tự",
+    "lbl.fields.pronunciations_explanations": "Phiên âm và định nghĩa",
+    "lbl.btn.search": "Tìm",
+    "lbl.fields.definition": "Định nghĩa",
+    "msg.title.load_data": "Tải dữ liệu",
+    "msg.err.load_data_fail": "Tải dữ liệu thất bại. Vui lòng thử lại sau.",
+    "msg.title.search_character": "Tìm Hán tự",
+    "msg.err.search_character_fail": "Tìm Hán tự thất bại.",
+    "msg.err.is_not_chinese_character": "{0} không phải là Hán tự",
+    "msg.err.character_empty": "Hán tự trống.",
+    "msg.err.character_not_found": "Không tìm thấy Hán tự.",
+    "msg.info.not_found_definition": "Không tìm thấy định nghĩa."
+}
