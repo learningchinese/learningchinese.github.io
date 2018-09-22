@@ -39,30 +39,32 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var _app_routes__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.routes */ "./src/app/app.routes.ts");
 /* harmony import */ var _components_app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/app.component */ "./src/app/components/app.component.ts");
-/* harmony import */ var _components_common_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/common/navigation/navigation.component */ "./src/app/components/common/navigation/navigation.component.ts");
-/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
-/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
-/* harmony import */ var _components_character_character_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/character/character.component */ "./src/app/components/character/character.component.ts");
-/* harmony import */ var _components_common_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/common/pagination/pagination.component */ "./src/app/components/common/pagination/pagination.component.ts");
-/* harmony import */ var _configs_app_config__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./configs/app.config */ "./src/app/configs/app.config.ts");
-/* harmony import */ var _directives_permission_directive__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directives/permission.directive */ "./src/app/directives/permission.directive.ts");
-/* harmony import */ var _components_common_popup_popup_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/common/popup/popup.component */ "./src/app/components/common/popup/popup.component.ts");
-/* harmony import */ var _services_popup_service__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./services/popup.service */ "./src/app/services/popup.service.ts");
-/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
-/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
-/* harmony import */ var _services_single_character_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/single-character.service */ "./src/app/services/single-character.service.ts");
-/* harmony import */ var _utils_string_util__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./utils/string.util */ "./src/app/utils/string.util.ts");
-/* harmony import */ var _utils_store_util__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./utils/store.util */ "./src/app/utils/store.util.ts");
-/* harmony import */ var _pipes_sanitize_html_pipe__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./pipes/sanitize-html.pipe */ "./src/app/pipes/sanitize-html.pipe.ts");
-/* harmony import */ var _services_pub_sub_service__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./services/pub-sub.service */ "./src/app/services/pub-sub.service.ts");
-/* harmony import */ var app_pipes_i18n_pipe__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! app/pipes/i18n.pipe */ "./src/app/pipes/i18n.pipe.ts");
-/* harmony import */ var app_services_i18n_service__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! app/services/i18n.service */ "./src/app/services/i18n.service.ts");
+/* harmony import */ var app_material_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! app/material.module */ "./src/app/material.module.ts");
+/* harmony import */ var _components_common_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/common/navigation/navigation.component */ "./src/app/components/common/navigation/navigation.component.ts");
+/* harmony import */ var _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/dashboard/dashboard.component */ "./src/app/components/dashboard/dashboard.component.ts");
+/* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
+/* harmony import */ var _components_character_character_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/character/character.component */ "./src/app/components/character/character.component.ts");
+/* harmony import */ var _components_common_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/common/pagination/pagination.component */ "./src/app/components/common/pagination/pagination.component.ts");
+/* harmony import */ var _configs_app_config__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./configs/app.config */ "./src/app/configs/app.config.ts");
+/* harmony import */ var _directives_permission_directive__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directives/permission.directive */ "./src/app/directives/permission.directive.ts");
+/* harmony import */ var _components_common_popup_popup_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/common/popup/popup.component */ "./src/app/components/common/popup/popup.component.ts");
+/* harmony import */ var _services_popup_service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./services/popup.service */ "./src/app/services/popup.service.ts");
+/* harmony import */ var _services_user_service__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./services/user.service */ "./src/app/services/user.service.ts");
+/* harmony import */ var _services_auth_service__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./services/auth.service */ "./src/app/services/auth.service.ts");
+/* harmony import */ var _services_single_character_service__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./services/single-character.service */ "./src/app/services/single-character.service.ts");
+/* harmony import */ var _utils_string_util__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./utils/string.util */ "./src/app/utils/string.util.ts");
+/* harmony import */ var _utils_store_util__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./utils/store.util */ "./src/app/utils/store.util.ts");
+/* harmony import */ var _pipes_sanitize_html_pipe__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./pipes/sanitize-html.pipe */ "./src/app/pipes/sanitize-html.pipe.ts");
+/* harmony import */ var _services_pub_sub_service__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./services/pub-sub.service */ "./src/app/services/pub-sub.service.ts");
+/* harmony import */ var app_pipes_i18n_pipe__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! app/pipes/i18n.pipe */ "./src/app/pipes/i18n.pipe.ts");
+/* harmony import */ var app_services_i18n_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! app/services/i18n.service */ "./src/app/services/i18n.service.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -96,30 +98,31 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _angular_forms__WEBPACK_IMPORTED_MODULE_2__["FormsModule"],
                 _app_routes__WEBPACK_IMPORTED_MODULE_4__["routing"],
-                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"]
+                _angular_http__WEBPACK_IMPORTED_MODULE_3__["HttpModule"],
+                app_material_module__WEBPACK_IMPORTED_MODULE_6__["MaterialModule"]
             ],
             declarations: [
                 _components_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
-                _components_common_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_6__["NavigationComponent"],
-                _directives_permission_directive__WEBPACK_IMPORTED_MODULE_12__["PermissionDirective"],
-                _components_common_popup_popup_component__WEBPACK_IMPORTED_MODULE_13__["PopupComponent"],
-                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_7__["DashBoardComponent"],
-                _components_about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
-                _components_character_character_component__WEBPACK_IMPORTED_MODULE_9__["CharacterComponent"],
-                _components_common_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_10__["PaginationComponent"],
-                _pipes_sanitize_html_pipe__WEBPACK_IMPORTED_MODULE_20__["SanitizeHtmlPipe"],
-                app_pipes_i18n_pipe__WEBPACK_IMPORTED_MODULE_22__["I18nPipe"]
+                _components_common_navigation_navigation_component__WEBPACK_IMPORTED_MODULE_7__["NavigationComponent"],
+                _directives_permission_directive__WEBPACK_IMPORTED_MODULE_13__["PermissionDirective"],
+                _components_common_popup_popup_component__WEBPACK_IMPORTED_MODULE_14__["PopupComponent"],
+                _components_dashboard_dashboard_component__WEBPACK_IMPORTED_MODULE_8__["DashBoardComponent"],
+                _components_about_about_component__WEBPACK_IMPORTED_MODULE_9__["AboutComponent"],
+                _components_character_character_component__WEBPACK_IMPORTED_MODULE_10__["CharacterComponent"],
+                _components_common_pagination_pagination_component__WEBPACK_IMPORTED_MODULE_11__["PaginationComponent"],
+                _pipes_sanitize_html_pipe__WEBPACK_IMPORTED_MODULE_21__["SanitizeHtmlPipe"],
+                app_pipes_i18n_pipe__WEBPACK_IMPORTED_MODULE_23__["I18nPipe"]
             ],
             providers: [
-                _configs_app_config__WEBPACK_IMPORTED_MODULE_11__["AppConfig"],
-                _services_auth_service__WEBPACK_IMPORTED_MODULE_16__["AuthService"],
-                _utils_string_util__WEBPACK_IMPORTED_MODULE_18__["StringUtil"],
-                _services_popup_service__WEBPACK_IMPORTED_MODULE_14__["PopupService"],
-                _services_user_service__WEBPACK_IMPORTED_MODULE_15__["UserService"],
-                _utils_store_util__WEBPACK_IMPORTED_MODULE_19__["StoreUtil"],
-                _services_single_character_service__WEBPACK_IMPORTED_MODULE_17__["SingleCharacterService"],
-                _services_pub_sub_service__WEBPACK_IMPORTED_MODULE_21__["PubSubService"],
-                app_services_i18n_service__WEBPACK_IMPORTED_MODULE_23__["I18nService"]
+                _configs_app_config__WEBPACK_IMPORTED_MODULE_12__["AppConfig"],
+                _services_auth_service__WEBPACK_IMPORTED_MODULE_17__["AuthService"],
+                _utils_string_util__WEBPACK_IMPORTED_MODULE_19__["StringUtil"],
+                _services_popup_service__WEBPACK_IMPORTED_MODULE_15__["PopupService"],
+                _services_user_service__WEBPACK_IMPORTED_MODULE_16__["UserService"],
+                _utils_store_util__WEBPACK_IMPORTED_MODULE_20__["StoreUtil"],
+                _services_single_character_service__WEBPACK_IMPORTED_MODULE_18__["SingleCharacterService"],
+                _services_pub_sub_service__WEBPACK_IMPORTED_MODULE_22__["PubSubService"],
+                app_services_i18n_service__WEBPACK_IMPORTED_MODULE_24__["I18nService"]
             ],
             bootstrap: [_components_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]]
         })
@@ -481,7 +484,7 @@ var CharacterComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n\t<div class=\"container\">\r\n\t\t<a class=\"navbar-brand\" href=\"/\" ng-click=\"brandClicked()\">Learning Chinese</a>\r\n\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\r\n\t\t aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n\t\t\t<span class=\"navbar-toggler-icon\"></span>\r\n\t\t</button>\r\n\t\t<div class=\"collapse navbar-collapse mt-1\" id=\"navbarSupportedContent\">\r\n\t\t\t<ul class=\"navbar-nav mr-auto\">\r\n\t\t\t\t<li class=\"nav-item\" *ngFor=\"let item of menuItems\" permission=\"{{item.permission}}\" [ngClass]=\"{'active': item === currentTab}\"\r\n\t\t\t\t (click)=\"changeCurrentTab(item)\">\r\n\t\t\t\t\t<a class=\"nav-link\" routerLink=\"{{item.path}}\">\r\n\t\t\t\t\t\t{{item.title | i18n}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<ul class=\"navbar-nav\">\r\n\t\t\t\t<li class=\"nav-item\" *ngIf=\"!authService.isAuthenticated()\" permission=\"{{menuRightItems[0].permission}}\" [ngClass]=\"{'active': menuRightItems[0] === currentTab}\" (click)=\"changeCurrentTab(menuRightItems[0])\">\r\n\t\t\t\t\t<a class=\"nav-link\" routerLink=\"{{menuRightItems[0].path}}\">\r\n\t\t\t\t\t\t{{menuRightItems[0].title | i18n}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item dropdown\" *ngIf=\"authService.isAuthenticated()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"javascript:void(0);\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\"\r\n\t\t\t\t\t aria-expanded=\"false\">\r\n\t\t\t\t\t\t{{authService.getUsername()}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n\t\t\t\t\t\t<a class=\"dropdown-item\" routerLink=\"{{menuRightItems[1].path}}\" (click)=\"changeCurrentTab(menuRightItems[1])\">Change Password</a>\r\n\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"logout()\">\r\n\t\t\t\t\t\t\t{{'menu.items.logout' | i18n}}\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</nav>"
+module.exports = "<nav>\r\n\t<mat-toolbar color=\"primary\" layout-gt-md=\"row\">\r\n\t\t<a mat-button href=\"/\" ng-click=\"brandClicked()\">\r\n\t\t\t<h3>Learning Chinese</h3>\r\n\t\t</a>\r\n\t\t<a mat-button *ngFor=\"let item of menuItems\" permission=\"{{item.permission}}\" [ngClass]=\"{'active': item === currentTab}\"\r\n\t\t (click)=\"changeCurrentTab(item)\" routerLink=\"{{item.path}}\">\r\n\t\t\t{{item.title | i18n}}\r\n\t\t</a>\r\n\t\t<a mat-button *ngIf=\"!authService.isAuthenticated()\" permission=\"{{menuRightItems[0].permission}}\" [ngClass]=\"{'active': menuRightItems[0] === currentTab}\"\r\n\t\t (click)=\"changeCurrentTab(menuRightItems[0])\" routerLink=\"{{menuRightItems[0].path}}\">\r\n\t\t\t{{menuRightItems[0].title | i18n}}\r\n\t\t</a>\r\n\t\t<button mat-button [matMenuTriggerFor]=\"menu\" *ngIf=\"authService.isAuthenticated()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n\t\t\t{{authService.getUsername()}}\r\n\t\t</button>\r\n\t\t<mat-menu #menu=\"matMenu\" *ngIf=\"authService.isAuthenticated()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n\t\t\t<a mat-menu-item routerLink=\"{{menuRightItems[1].path}}\" (click)=\"changeCurrentTab(menuRightItems[1])\">Change Password</a>\r\n\t\t\t<button mat-menu-item (click)=\"logout()\">\r\n\t\t\t\t{{'menu.items.logout' | i18n}}\r\n\t\t\t</button>\r\n\t\t</mat-menu>\r\n\t</mat-toolbar>\r\n</nav>\r\n<!-- <nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">\r\n\t<div class=\"container\">\r\n\t\t<a class=\"navbar-brand\" href=\"/\" ng-click=\"brandClicked()\">Learning Chinese</a>\r\n\t\t<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\"\r\n\t\t aria-expanded=\"false\" aria-label=\"Toggle navigation\">\r\n\t\t\t<span class=\"navbar-toggler-icon\"></span>\r\n\t\t</button>\r\n\t\t<div class=\"collapse navbar-collapse mt-1\" id=\"navbarSupportedContent\">\r\n\t\t\t<ul class=\"navbar-nav mr-auto\">\r\n\t\t\t\t<li class=\"nav-item\" *ngFor=\"let item of menuItems\" permission=\"{{item.permission}}\" [ngClass]=\"{'active': item === currentTab}\"\r\n\t\t\t\t (click)=\"changeCurrentTab(item)\">\r\n\t\t\t\t\t<a class=\"nav-link\" routerLink=\"{{item.path}}\">\r\n\t\t\t\t\t\t{{item.title | i18n}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t\t<ul class=\"navbar-nav\">\r\n\t\t\t\t<li class=\"nav-item\" *ngIf=\"!authService.isAuthenticated()\" permission=\"{{menuRightItems[0].permission}}\" [ngClass]=\"{'active': menuRightItems[0] === currentTab}\"\r\n\t\t\t\t (click)=\"changeCurrentTab(menuRightItems[0])\">\r\n\t\t\t\t\t<a class=\"nav-link\" routerLink=\"{{menuRightItems[0].path}}\">\r\n\t\t\t\t\t\t{{menuRightItems[0].title | i18n}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t</li>\r\n\t\t\t\t<li class=\"nav-item dropdown\" *ngIf=\"authService.isAuthenticated()\" [ngClass]=\"{'active': menuRightItems[1] === currentTab}\">\r\n\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" href=\"javascript:void(0);\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\"\r\n\t\t\t\t\t aria-expanded=\"false\">\r\n\t\t\t\t\t\t{{authService.getUsername()}}\r\n\t\t\t\t\t</a>\r\n\t\t\t\t\t<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">\r\n\t\t\t\t\t\t<a class=\"dropdown-item\" routerLink=\"{{menuRightItems[1].path}}\" (click)=\"changeCurrentTab(menuRightItems[1])\">Change Password</a>\r\n\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"javascript:void(0);\" (click)=\"logout()\">\r\n\t\t\t\t\t\t\t{{'menu.items.logout' | i18n}}\r\n\t\t\t\t\t\t</a>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</li>\r\n\t\t\t</ul>\r\n\t\t</div>\r\n\t</div>\r\n</nav> -->"
 
 /***/ }),
 
@@ -1003,6 +1006,71 @@ var PermissionDirective = /** @class */ (function () {
         __metadata("design:paramtypes", [_angular_core__WEBPACK_IMPORTED_MODULE_0__["ElementRef"], _angular_core__WEBPACK_IMPORTED_MODULE_0__["Renderer"], _services_auth_service__WEBPACK_IMPORTED_MODULE_1__["AuthService"]])
     ], PermissionDirective);
     return PermissionDirective;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/material.module.ts":
+/*!************************************!*\
+  !*** ./src/app/material.module.ts ***!
+  \************************************/
+/*! exports provided: MaterialModule */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MaterialModule", function() { return MaterialModule; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
+/* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+/**
+ * Defined using material modules.
+ */
+
+
+
+var MaterialModule = /** @class */ (function () {
+    function MaterialModule() {
+    }
+    MaterialModule = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            imports: [
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"]
+            ],
+            exports: [
+                _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_1__["BrowserAnimationsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatButtonModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatToolbarModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatMenuModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatTableModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatProgressSpinnerModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatPaginatorModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatFormFieldModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatInputModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatGridListModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_2__["MatCardModule"]
+            ],
+        })
+    ], MaterialModule);
+    return MaterialModule;
 }());
 
 
